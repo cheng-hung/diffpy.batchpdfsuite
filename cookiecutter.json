@@ -1,0 +1,20 @@
+{
+  "author_names": "Yuchen Xiao, Simon Billinge",
+  "author_emails": "yx2924@columbia.edu, sbillinge@ucsb.edu",
+  "maintainer_names": "Yuchen Xiao, Simon Billinge",
+  "maintainer_emails": "yx2924@columbia.edu, sbillinge@ucsb.edu",
+  "maintainer_github_usernames": "sbillinge",
+  "contributors": "Yuchen Xiao and members of the diffpy.batchpdfsuite community",
+  "license_holders": "contributors to the diffpy.batchpdfsuite community",
+  "project_name": "diffpy.batchpdfsuite",
+  "github_username_or_orgname": "diffpy",
+  "github_repo_name": "diffpy.batchpdfsuite",
+  "conda_pypi_package_dist_name": "diffpy.batchpdfsuite",
+  "package_dir_name": "diffpy.batchpdfsuite",
+  "project_short_description": "GUI for batch refinements of multiple PDF datasets",
+  "project_keywords": "diffraction, PDF, X-ray, neutron",
+  "minimum_supported_python_version": "3.12",
+  "maximum_supported_python_version": "3.14",
+  "project_needs_c_code_compiled": "No",
+  "project_has_gui_tests": "No"
+}
