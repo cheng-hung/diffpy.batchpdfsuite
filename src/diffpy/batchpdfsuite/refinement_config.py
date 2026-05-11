@@ -8,7 +8,6 @@ from datetime import datetime
 from pathlib import Path
 
 import jinja2
-from diffpy.apps.app_runmacro import MacroParser
 from pyface.api import OK, DirectoryDialog
 from traits.api import (
     Any,
@@ -38,6 +37,7 @@ from traitsui.api import (
     spring,
 )
 
+from diffpy.apps.app_runmacro import MacroParser
 from diffpy.batchpdfsuite.refinement_editor import (
     LogDialog,
     TextFileEditorDialog,

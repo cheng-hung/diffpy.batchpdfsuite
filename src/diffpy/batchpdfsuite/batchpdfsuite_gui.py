@@ -94,36 +94,3 @@ class BatchPDFsuiteGUI(HasTraits):
         width=800,
         height=600,
     )
-
-    # traits_view = View(
-    #     HGroup(
-    #         VGroup(
-    #             Item(
-    #                 "select_exp_files",
-    #                 editor=InstanceEditor(view="traits_view"),
-    #                 style="custom",
-    #                 width=300,
-    #                 show_label=False,
-    #             ),
-    #             Item(
-    #                 "select_phase_files",
-    #                 editor=InstanceEditor(view="traits_view"),
-    #                 style="custom",
-    #                 width=300,
-    #                 show_label=False,
-    #             ),
-    #         ),
-    #         Item(
-    #             "refinement_configuration",
-    #             editor=InstanceEditor(view="traits_view"),
-    #             style="custom",
-    #             show_label=False,
-    #         ),
-    #     ),
-    #     resizable=True,
-    #     title="Batch PDF Refinement Suite",
-    #     width=800,
-    #     height=600,
-    #     kind="live",
-    #     toolbar=toolbar,
-    # )
