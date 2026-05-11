@@ -1,1 +1,8 @@
 numpy
+traits
+traitsui
+mayavi
+pyside6
+watchdog
+jinja2
+# FIXME: add diffpy.apps once it is released

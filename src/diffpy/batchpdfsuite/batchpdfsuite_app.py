@@ -1,33 +1,67 @@
-import argparse
+#!/usr/bin/env python
+##############################################################################
+#
+# diffpy.xpdfsuite    by Simon J. L. Billinge group
+#                   (c) 2012 Trustees of the Columbia University
+#                   in the City of New York.  All rights reserved.
+#
+# File coded by:    Xiaohao Yang
+#
+# See AUTHORS.rst for a list of people who contributed.
+# See LICENSE.txt for license information.
+#
+##############################################################################
+"""Provide UI for pdfgetxgui."""
 
-from diffpy.batchpdfsuite.version import __version__  # noqa
+import sys
+
+from pyface.api import ImageResource, SplashScreen
+from traits.etsconfig.api import ETSConfig
+
+from diffpy.batchpdfsuite.batchpdfsuite_gui import BatchPDFsuiteGUI
+from diffpy.batchpdfsuite.help import IMAGE_DIR
+
+# break if help passed to the args
+sysargv = sys.argv[1:]
+# if ('--help' in sysargv) or('-h' in sysargv):
+#     from dpx.srxplanargui.srxconfig import SrXconfig
+#     SrXconfig(args=sysargv)
+
+ETSConfig.toolkit = "qt"
+
+
+# open splash screen
+def maybe_show_splash(argv):
+    if any(aa in ("-h", "--help") for aa in argv):
+        return None
+
+    try:
+        splash = SplashScreen(
+            image=ImageResource(str(IMAGE_DIR / "splash.png")),
+            show_log_messages=False,
+        )
+        if splash is not None:
+            splash.open()
+        return splash
+    except Exception:
+        return None
+
+
+def running_under_pytest():
+    return "pytest" in sys.modules
+
+
+splash = None
+if not running_under_pytest():
+    splash = maybe_show_splash(sysargv)
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        prog="diffpy.batchpdfsuite",
-        description=(
-            "GUI for batch refinements of multiple PDF datasets\n\n"
-            "For more information, visit: "
-            "https://github.com/diffpy/diffpy.batchpdfsuite/"
-        ),
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-    )
-
-    parser.add_argument(
-        "--version",
-        action="store_true",
-        help="Show the program's version number and exit",
-    )
-
-    args = parser.parse_args()
-
-    if args.version:
-        print(f"diffpy.batchpdfsuite {__version__}")
-    else:
-        # Default behavior when no arguments are given
-        parser.print_help()
+    gui = BatchPDFsuiteGUI(splash=splash)
+    gui.configure_traits(view="traits_view")
+    return
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
+    # main()
