@@ -1,0 +1,29 @@
+load profile exp_data from "{{ diffpy.profile_path }}"
+load structure G1 from "{{ diffpy.structure_path }}"
+
+# modify by user
+set exp_data q_range as 0.1 25
+set exp_data calculation_range as 1.5 50 0.01
+
+# do not modify
+set G1 spacegroup as auto
+create equation variables s0
+set equation as "s0*G1"
+save to "{{ diffpy.result_path }}"
+
+# naming convention: (<phase_name>_)<parameter_name>(_<atom_index>)
+# e.g. s0, qdamp, qbroad, G1_delta2
+# e.g. G1_a, G1_b, G1_c, G1_alpha, G1_beta, G1_gamma, G1_delta2
+# e.g. G1_x_0, G1_y_0, G1_z_0, G1_Uiso_0, G1_U12_0, G1_U23_0
+# when the initial value is not provided, it will use the default value from
+# the structure file
+
+variables:
+---
+- G1_a: 3.52
+- G1_delta2: 2
+- G1_Uiso_0: 0.005
+- s0: 0.4
+- qdamp: 0.04
+- qbroad: 0.02
+---
