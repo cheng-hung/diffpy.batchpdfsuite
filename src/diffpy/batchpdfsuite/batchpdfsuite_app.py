@@ -1,18 +1,3 @@
-#!/usr/bin/env python
-##############################################################################
-#
-# diffpy.xpdfsuite    by Simon J. L. Billinge group
-#                   (c) 2012 Trustees of the Columbia University
-#                   in the City of New York.  All rights reserved.
-#
-# File coded by:    Xiaohao Yang
-#
-# See AUTHORS.rst for a list of people who contributed.
-# See LICENSE.txt for license information.
-#
-##############################################################################
-"""Provide UI for pdfgetxgui."""
-
 import sys
 
 from pyface.api import ImageResource, SplashScreen

@@ -15,26 +15,28 @@ toolbar_settings = Action(
     name="settings",
     action="_settings",
     tooltip="Configure the settings for PDF refinement",
-    image=ImageResource(str(IMAGE_DIR / "settings.png")),
+    image=ImageResource(str(IMAGE_DIR / "gear.png")),
 )
 toolbar_refinement_log = Action(
     name="log",
     action="_refinement_log",
     tooltip="Display the runtime output for PDF refinement",
-    image=ImageResource(str(IMAGE_DIR / "log.png")),
+    image=ImageResource(str(IMAGE_DIR / "text.png")),
 )
 
 toolbar_help = Action(
     name="help",
     action="_help",
     tooltip="Quick start",
-    image=ImageResource(str(IMAGE_DIR / "help.png")),
+    image=ImageResource(str(IMAGE_DIR / "info.png")),
 )
 
 toolbar = ToolBar(
     toolbar_settings,
     toolbar_refinement_log,
     toolbar_help,
+    image_size=(32, 32),
+    show_tool_names=False,
 )
 
 
