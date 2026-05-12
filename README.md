@@ -11,9 +11,7 @@ conda create -n diffpy.batchpdfsuite_env python=3.13 pip
 conda activate diffpy.batchpdfsuite_env
 ```
 
-### Install ``diffpy.apps`` dependency
-
-This step is required because ``diffpy.apps`` is not fully released yet.
+### Install `diffpy.apps` dependency
 
 ```bash
 git clone https://github.com/diffpy/diffpy.apps
@@ -22,7 +20,7 @@ conda install --file requirements/conda.txt
 pip install .
 ```
 
-### Install ``diffpy.batchpdfsuite``
+### Install `diffpy.batchpdfsuite`
 
 It's simple. The only command required is the following:
 
@@ -43,4 +41,4 @@ Verify the installation:
 pip list
 ```
 
-Great! The package is now importable in any Python scripts located on your local machine. For more information, please refer to the Level 4 documentation at [https://billingegroup.github.io/scikit-package/](https://billingegroup.github.io/scikit-package/).
+Great! The package is now importable in any Python scripts located on your local machine.
