@@ -185,8 +185,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstd-1.5.7-h3eecb57_6.conda
       - pypi: https://files.pythonhosted.org/packages/8b/b3/7614beabc4929b047943e247313705b33811ee8d0a7481826300e41c3fb6/chaco-6.1.1-cp313-cp313-macosx_10_13_x86_64.whl
       - pypi: git+https://github.com/diffpy/diffpy.apps?branch=main#8d423948c22d18aff467854088d318a4e7fc7952
+      - pypi: git+https://github.com/diffpy/diffpy.batchpdfsuite?branch=main#0b25216595245d5aca60a2fb7acc7ca5541d6a3b
       - pypi: https://files.pythonhosted.org/packages/eb/96/69dba5657e5f0d88fa047ab058504ac5bfcfad1c6a4927be106e52420795/enable-6.1.0.tar.gz
-      - pypi: ./
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/arpeggio-2.0.3-pyhcf101f3_0.conda
@@ -364,8 +364,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
       - pypi: https://files.pythonhosted.org/packages/e2/2c/06ede7fa5adfcf2b1bab45a943b75c056d2de2abecd334c209b5a02e3337/chaco-6.1.1-cp313-cp313-macosx_11_0_arm64.whl
       - pypi: git+https://github.com/diffpy/diffpy.apps?branch=main#8d423948c22d18aff467854088d318a4e7fc7952
+      - pypi: git+https://github.com/diffpy/diffpy.batchpdfsuite?branch=main#0b25216595245d5aca60a2fb7acc7ca5541d6a3b
       - pypi: https://files.pythonhosted.org/packages/19/68/9d78e6e693a1135ba22cb1d17ac9bf9eddad078cc718f18f35f1c82835a9/enable-6.1.0-cp313-cp313-macosx_11_0_arm64.whl
-      - pypi: ./
   terminal:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
@@ -551,8 +551,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstd-1.5.7-h3eecb57_6.conda
       - pypi: https://files.pythonhosted.org/packages/8b/b3/7614beabc4929b047943e247313705b33811ee8d0a7481826300e41c3fb6/chaco-6.1.1-cp313-cp313-macosx_10_13_x86_64.whl
       - pypi: git+https://github.com/diffpy/diffpy.apps?branch=main#8d423948c22d18aff467854088d318a4e7fc7952
+      - pypi: git+https://github.com/diffpy/diffpy.batchpdfsuite?branch=main#0b25216595245d5aca60a2fb7acc7ca5541d6a3b
       - pypi: https://files.pythonhosted.org/packages/eb/96/69dba5657e5f0d88fa047ab058504ac5bfcfad1c6a4927be106e52420795/enable-6.1.0.tar.gz
-      - pypi: ./
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/arpeggio-2.0.3-pyhcf101f3_0.conda
@@ -730,8 +730,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
       - pypi: https://files.pythonhosted.org/packages/e2/2c/06ede7fa5adfcf2b1bab45a943b75c056d2de2abecd334c209b5a02e3337/chaco-6.1.1-cp313-cp313-macosx_11_0_arm64.whl
       - pypi: git+https://github.com/diffpy/diffpy.apps?branch=main#8d423948c22d18aff467854088d318a4e7fc7952
+      - pypi: git+https://github.com/diffpy/diffpy.batchpdfsuite?branch=main#0b25216595245d5aca60a2fb7acc7ca5541d6a3b
       - pypi: https://files.pythonhosted.org/packages/19/68/9d78e6e693a1135ba22cb1d17ac9bf9eddad078cc718f18f35f1c82835a9/enable-6.1.0-cp313-cp313-macosx_11_0_arm64.whl
-      - pypi: ./
 packages:
 - conda: https://conda.anaconda.org/conda-forge/osx-64/_openmp_mutex-4.5-7_kmp_llvm.conda
   build_number: 7
@@ -1128,10 +1128,9 @@ packages:
   requires_dist:
   - numpy
   requires_python: '>=3.11,<3.14'
-- pypi: ./
+- pypi: git+https://github.com/diffpy/diffpy.batchpdfsuite?branch=main#0b25216595245d5aca60a2fb7acc7ca5541d6a3b
   name: diffpy-batchpdfsuite
   version: 0.0.1
-  sha256: 54cabb6842bfb62d5cee6d361774fdb945566f497468151f2227db2efa85106c
   requires_dist:
   - chaco
   requires_python: '>=3.11,<3.14'

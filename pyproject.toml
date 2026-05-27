@@ -124,8 +124,9 @@ chaco = "*"
 [tool.pixi.tasks]
 # Launch the GUI directly from the source tree.
 # gui = "PYTHONPATH=src python -m diffpy.batchpdfsuite.batchpdfsuite_app"
-gui = { cmd = "python -m diffpy.batchpdfsuite.batchpdfsuite_app", env = { PYTHONPATH = "src" } }
 # gui = "python -m diffpy.batchpdfsuite.batchpdfsuite_app"
+# gui = { cmd = "python -m diffpy.batchpdfsuite.batchpdfsuite_app", env = { PYTHONPATH = "src" } }
+gui = { cmd = "python -m diffpy.batchpdfsuite.batchpdfsuite_app" }
 
 [tool.pixi.environments]
 #terminal = { features = ["profile", "terminal"], solve-group = "profile" }
